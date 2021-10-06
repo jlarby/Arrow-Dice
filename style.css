@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;900&display=swap");
+* {
+  padding: 0%;
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--light);
+}
+:root {
+  --dark: #212529;
+  --dark-g: #343a40;
+  --middle-g-d: #adb5bd;
+  --light: #f8f9fa;
+  --light-g: #e9ecef;
+  --card-bg: #6c757d;
+
+  --btn-green: #2b9348;
+  --btn-red: #ee6055;
+  --btn-grey: #777;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  background: var(--dark);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+}
+
+/* Utilities */
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+.head-lg {
+  font-size: 3rem;
+}
+.heading-light {
+  font-weight: 200;
+}
+.btn {
+  padding: 1rem 4rem;
+  border-radius: 50px;
+  border: 2px solid;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  cursor: pointer;
+}
+.red {
+  background: var(--btn-red);
+  border: 2px solid #a8231a;
+}
+.green {
+  background: var(--btn-green);
+  border: 2px solid #0f6627;
+}
+.disabled {
+  text-decoration: line-through;
+  cursor: not-allowed;
+  background: var(--btn-grey);
+  border: 2px solid rgb(92, 92, 92);
+}
+.btn:hover {
+  opacity: 0.8;
+}
+.btn-sm {
+  padding: 0.6rem 2rem;
+}
+hr {
+  border: none;
+  border-bottom: 2px solid var(--dark-g);
+  width: 100%;
+}
+.text-bold {
+  font-weight: 900;
+}
+.score {
+  color: var(--dark);
+  font-weight: 900;
+}
+.score-text {
+  font-size: 1.5rem;
+  color: var(--dark-g);
+}
+span {
+  color: var(--dark);
+}
+.text-sm {
+  font-size: 0.8rem;
+}
+/* Title */
+.title {
+  width: 100%;
+  text-align: center;
+  margin: 1rem 0;
+}
+/* Game Board */
+.game {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+/* Card */
+.card {
+  min-width: 350px;
+  background: var(--light-g);
+  border-radius: 5px;
+  box-shadow: #f8f9fa13 0px 0px 5px 1px;
+  padding-bottom: 0.5rem;
+}
+.card > *,
+.card-title > *,
+.card-body > * {
+  color: var(--dark-g);
+}
+.card-title {
+  width: 100%;
+  border-bottom: 2px solid var(--dark-g);
+  margin-bottom: 1rem;
+}
+.card-title p {
+  font-size: 1.3rem;
+  font-weight: 300;
+  text-align: center;
+  padding: 0.3rem;
+}
+.card-body {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.card-body > * {
+  padding: 0.8rem 0;
+}
+.card-body img {
+  width: 40px;
+  vertical-align: middle;
+}
+.card-footer {
+  display: flex;
+  width: 100%;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.card-footer > * {
+  flex: 1 1 0;
+  max-width: 250px;
+  margin: 0.5rem;
+}
+/* scores */
+.scores {
+  text-align: center;
+}
+/* Winner Segment */
+.winner {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin-top: 3rem;
+}
+.winner > * {
+  margin: 1rem;
+}
+/* Dice Spin */
+.diceSpin {
+  padding-left: 10px;
+  animation: diceSpin infinite 1ms linear;
+}
+/* Spinning Dice Kyeframes */
+@keyframes diceSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
